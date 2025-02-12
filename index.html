@@ -14,8 +14,10 @@
 
       /* 
         Media Queries: used to apply different styles for different screen sizes
+
+        Media Types: all, screen, print(printers), speech(screen readers).
         
-        Conditions: max-width, min-width, max-height, min-height, orientation, aspect-ratio, etc.
+        Media features (conditions): max-width, min-width, max-height, min-height, orientation, aspect-ratio, etc.
 
         Orientation: portrait, landscape
 
@@ -23,12 +25,22 @@
 
         Must be dfined at the end of the CSS file to work properly
 
+        Logical Operators: and, not, only, or (,)
+        Logical operators can be used to combine multiple media features together.
+
       */
+
+      /* Laptop View (Screens >= 768px) and (Screens <= 1024px) */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
 
       /* Tablet View (Screens <= 768px) */
       @media (max-width: 768px) {
         body {
-          background-color: lightgreen;
+          background-color: lightcoral;
         }
       }
 
@@ -37,6 +49,23 @@
         body {
           background-color: lightblue;
           font-size: 12px;
+        }
+      }
+
+      /* Print Styles */
+      /* for print or screen with max-width: 280px */
+      @media print, screen and (max-width: 280px) {
+        body {
+          background-color: red;
+          color: white;
+        }
+      }
+
+      /* oriantation: landscape */
+      /* for screen not in orientation: landscape */
+      @media not (orientation: landscape) {
+        body {
+          background-color: lightyellow;
         }
       }
     </style>

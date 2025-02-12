@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      /* Default Styles (Desktop) */
+      body {
+        background-color: white;
+        color: black;
+        font-size: 18px;
+      }
+
+      /* 
+        Media Queries: used to apply different styles for different screen sizes
+        
+        Conditions: max-width, min-width, max-height, min-height, orientation, aspect-ratio, etc.
+
+        Orientation: portrait, landscape
+
+        aspect-ratio: 16/9, 4/3, 1/1, etc.
+
+        Must be dfined at the end of the CSS file to work properly
+
+      */
+
+      /* Tablet View (Screens <= 768px) */
+      @media (max-width: 768px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+
+      /* Mobile View (Screens <= 480px) */
+      @media (max-width: 480px) {
+        body {
+          background-color: lightblue;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media Query</h1>
+    <p>Resize the window to see the effect.</p>
+  </body>
+</html>
